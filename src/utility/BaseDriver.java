@@ -2,9 +2,11 @@ package utility;
 
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -52,7 +54,10 @@ public class BaseDriver {
 
     public void loginTest(){
         driver.get("https://demo.openmrs.org/");
-        OptionalWait(2);
+        Actions actions=new Actions(driver);
+        actions.sendKeys("beybun").keyDown(Keys.TAB).keyUp(Keys.TAB).sendKeys("123").build().perform();
+        WebElement loginButton= driver.findElement(By.id("loginButton"));
+        loginButton.click();
     }
 
 }
