@@ -1,17 +1,14 @@
 package utility;
 
+import mustafa.Elements;
 import org.apache.logging.log4j.LogManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -32,38 +29,26 @@ public class BaseDriver {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         wait=new WebDriverWait(driver,Duration.ofSeconds(20));
-
-        loginTest();
     }
 
-
-
     @AfterClass
-    public static void endOperations(){
-        OptionalWait(5);
+    public void endOperations(){
+        MyFunction.OptionalWait(5);
         driver.quit();
     }
 
-    public static void OptionalWait(int sec){
-        try {
-            Thread.sleep(sec*1000l);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 
     public void loginTest(){
-        driver.get("https://demo.openmrs.org/");
+        Elements elm = new Elements();
+        driver.get("https://openmrs.org/");
+        elm.demo.click();
+        elm.openMRS2.click();
         Actions actions=new Actions(driver);
-        actions.sendKeys("beybun").keyDown(Keys.TAB).keyUp(Keys.TAB).sendKeys("123").build().perform();
-        WebElement loginButton= driver.findElement(By.id("loginButton"));
-        loginButton.click();
+        actions.sendKeys("Admin").keyDown(Keys.TAB).keyUp(Keys.TAB).sendKeys("Admin123").build().perform();
+        actions.keyDown(Keys.TAB).keyUp(Keys.TAB).keyDown(Keys.ENTER).keyUp(Keys.ENTER).build().perform();
     }
 
 }
 //TODO BURAYA SONRA BEFOREMETHOD VE AFTERMETHOD ILE LOGLAMA ISLEMLERINI YAP
 
-/*
-Kullanacağımız environment https://openmrs.org adresidir. Bu environmentin alt alanı
-olan https://demo.openmrs.org/ ‘ta çalışmış olacağız.
- */
