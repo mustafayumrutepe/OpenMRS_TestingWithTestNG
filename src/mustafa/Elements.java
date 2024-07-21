@@ -19,4 +19,22 @@ public class Elements {
     @FindBy(xpath = "//ul[@id='sessionLocation']//li")
     public List<WebElement> locations;
 
+    @FindBy(linkText = "Find Patient Record")
+    public WebElement patientRecord;
+    //a[id*='active']
+
+    @FindBy(css = "[class='icon-user']")
+    public WebElement registerPatient;
+
+    @FindBy(xpath = "//*[text()='Male']")
+    public WebElement gender;
+
+    @FindBy(id = "relationship_type")
+    public WebElement relationship;
+
+    @FindBy(css = "[placeholder='Person Name']")
+    public WebElement personName;
+
+    @FindBy(className = "PersonName-givenName")
+    public WebElement verification;
 }
