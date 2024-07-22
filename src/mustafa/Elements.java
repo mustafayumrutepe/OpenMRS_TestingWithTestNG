@@ -21,7 +21,6 @@ public class Elements {
 
     @FindBy(linkText = "Find Patient Record")
     public WebElement patientRecord;
-    //a[id*='active']
 
     @FindBy(css = "[class='icon-user']")
     public WebElement registerPatient;
@@ -37,4 +36,25 @@ public class Elements {
 
     @FindBy(className = "PersonName-givenName")
     public WebElement verification;
+
+    @FindBy(id = "patient-search")
+    public WebElement search;
+
+    @FindBy(xpath = "(//*[@role='alert']/tr)[1]")
+    public WebElement selectThePatient;
+
+    @FindBy(xpath = "//*[@role='alert']/tr")
+    public List<WebElement> numberOfRows;
+
+    @FindBy(id = "patient-search-results-table_info")
+    public WebElement entries;
+
+    @FindBy(linkText = "Appointment Scheduling")
+    public WebElement appointmentScheduling;
+
+    @FindBy(linkText = "Manage Appointments")
+    public WebElement manageAppointments;
+
+    @FindBy(xpath = "(//*[@class='note error'])[2]")
+    public WebElement errorMessage;
 }
