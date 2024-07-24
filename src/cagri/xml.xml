@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuite">
+    <test name="myTest1">
+
+        <parameter name="name" value="beybun"></parameter>
+        <parameter name="lastname" value="kulilk"></parameter>
+
+        <groups>
+            <run>
+                <exclude name="Regression" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="mustafa.Tests" />
+        </classes>
+
+    </test>
+</suite>
+
+        <!-- ????????? include calismiyor-->
