@@ -1,6 +1,6 @@
-package utility;
+package Utility;
 
-import mustafa.Elements;
+import LocatorPage.Elements;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

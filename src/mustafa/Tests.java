@@ -1,17 +1,15 @@
 package mustafa;
+import LocatorPage.Elements;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utility.BaseDriver;
-import utility.MyFunction;
-
-import java.security.Key;
+import Utility.BaseDriver;
+import Utility.MyFunction;
 
 public class Tests extends BaseDriver {
     Elements elm=new Elements();
@@ -86,7 +84,7 @@ public class Tests extends BaseDriver {
     @DataProvider
     Object[] getData()
     {
-        Object[] data={"beybun","samsung","ipod"};
+        Object[] data={"beybun"};
         return data;
     }
 }

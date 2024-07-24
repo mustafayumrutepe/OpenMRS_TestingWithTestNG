@@ -1,9 +1,9 @@
-package mustafa;
+package LocatorPage;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utility.BaseDriver;
+import Utility.BaseDriver;
 
 import java.util.List;
 

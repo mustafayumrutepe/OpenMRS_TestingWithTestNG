@@ -1,9 +1,9 @@
 package cagri;
 
 import org.openqa.selenium.support.PageFactory;
-import utility.BaseDriver;
+import Utility.BaseDriver;
 
-public class Elements extends mustafa.Elements {
+public class Elements extends LocatorPage.Elements {
     public Elements() {PageFactory.initElements(BaseDriver.driver,this);}
 
 

@@ -1,4 +1,4 @@
-package utility;
+package Utility;
 
 public class MyFunction {
     public static void OptionalWait(int sec){

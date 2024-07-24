@@ -1,6 +1,8 @@
 package cagri;
 
-public class test2  extends mustafa.Elements{
+import LocatorPage.Elements;
+
+public class test2  extends Elements {
     public static void main(String[] args)  {
 
 
