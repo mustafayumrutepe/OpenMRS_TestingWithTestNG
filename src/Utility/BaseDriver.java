@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,10 +14,11 @@ import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class BaseDriver {
+public class BaseDriver{
     public static final org.apache.logging.log4j.Logger logger4j= LogManager.getLogger();
     public static WebDriver driver;
     public static WebDriverWait wait;
+
 
     @BeforeClass
     public void startupOperations() {
@@ -56,7 +58,22 @@ public class BaseDriver {
         actions.moveToElement(elm.BritishFlag).click().build().perform();
         elm.demo.click();
         elm.openMRS2.click();
+        wait.until(ExpectedConditions.elementToBeClickable(elm.Username));
+    }
 
+    public void OpenMyAccount(){
+        Elements elm=new Elements();
+        driver.get("https://openmrs.org");
+        Actions actions=new Actions(driver);
+        actions.moveToElement(elm.flag).click().build().perform();
+        actions.moveToElement(elm.BritishFlag).click().build().perform();
+        elm.demo.click();
+        elm.openMRS2.click();
+        wait.until(ExpectedConditions.elementToBeClickable(elm.Username));
+        elm.Username.sendKeys("Admin");
+        elm.password.sendKeys("Admin123");
+        elm.location.click();
+        elm.LoginButton.click();
     }
 
 }

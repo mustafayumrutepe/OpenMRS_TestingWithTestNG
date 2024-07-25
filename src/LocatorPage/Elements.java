@@ -76,4 +76,17 @@ public class Elements {
     @FindBy(xpath = "//*[@id='sessionLocation']/li[1]")
     public WebElement location;
 
+    @FindBy(xpath = "//*[@class='nav-item logout']/a")
+    public WebElement logout;
+
+    @FindBy(xpath = "//*[@class='nav-item identifier']")
+    public WebElement admin;
+
+    @FindBy(xpath = "//*[@id='user-account-menu']/li/a")
+    public  WebElement MyAccount;
+
+    @FindBy(xpath = "//*[@class='task'][1]")
+    public WebElement ChangePasswords;
+
+
 }
