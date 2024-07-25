@@ -57,4 +57,23 @@ public class Elements {
 
     @FindBy(xpath = "(//*[@class='note error'])[2]")
     public WebElement errorMessage;
+
+    @FindBy(xpath = "//*[@class='gt-current-lang']")
+    public WebElement flag;
+
+    @FindBy(xpath = "//*[@class='nturl'][1]")
+    public WebElement BritishFlag;
+
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement Username;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "//*[@id='loginButton']")
+    public WebElement LoginButton;
+
+    @FindBy(xpath = "//*[@id='sessionLocation']/li[1]")
+    public WebElement location;
+
 }
