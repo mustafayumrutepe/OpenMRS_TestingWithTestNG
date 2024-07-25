@@ -40,7 +40,7 @@ public class BaseDriver {
 
     public void loginTest(){
         Elements elm = new Elements();
-        driver.get("https://openmrs.org/");
+        driver.get("https://openmrs.org/demo/");
         elm.demo.click();
         elm.openMRS2.click();
         Actions actions=new Actions(driver);
@@ -49,7 +49,7 @@ public class BaseDriver {
     }
 
     public void OpenWebsite(){
-        driver.get("https://openmrs.org");
+        driver.get("https://openmrs.org/demo/");
 
     }
 
