@@ -11,7 +11,7 @@ public class Elements {
     public Elements() {PageFactory.initElements(BaseDriver.driver,this);}
 
     @FindBy(xpath = "//*[text()='Demo']")
-    public WebElement demo;
+    public static WebElement demo;
 
     @FindBy(xpath = "//*[text()='Enter the OpenMRS 2 Demo']")
     public WebElement openMRS2;

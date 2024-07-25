@@ -32,7 +32,7 @@ public class BaseDriver {
 
     @AfterClass
     public void endOperations(){
-        MyFunction.OptionalWait(5);
+        MyFunction.OptionalWait(2);
         driver.quit();
     }
 
@@ -46,6 +46,11 @@ public class BaseDriver {
         Actions actions=new Actions(driver);
         actions.sendKeys("Admin").keyDown(Keys.TAB).keyUp(Keys.TAB).sendKeys("Admin123").build().perform();
         actions.keyDown(Keys.TAB).keyUp(Keys.TAB).keyDown(Keys.ENTER).keyUp(Keys.ENTER).build().perform();
+    }
+
+    public void OpenWebsite(){
+        driver.get("https://openmrs.org");
+
     }
 
 }
