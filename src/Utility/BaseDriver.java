@@ -50,6 +50,12 @@ public class BaseDriver {
 
     public void OpenWebsite(){
         driver.get("https://openmrs.org");
+        Elements elm=new Elements();
+        Actions actions=new Actions(driver);
+        actions.moveToElement(elm.flag).click().build().perform();
+        actions.moveToElement(elm.BritishFlag).click().build().perform();
+        elm.demo.click();
+        elm.openMRS2.click();
 
     }
 
