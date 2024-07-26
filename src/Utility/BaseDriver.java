@@ -3,6 +3,7 @@ package Utility;
 import LocatorPage.Elements;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -26,6 +27,7 @@ public class BaseDriver{
         logger.setLevel(Level.SEVERE);
 
         driver=new ChromeDriver();
+        driver.manage().window().setPosition(new Point(-2000,0));
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
