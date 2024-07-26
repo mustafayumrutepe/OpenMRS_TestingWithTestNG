@@ -34,13 +34,13 @@ public class Elements {
     @FindBy(css = "[placeholder='Person Name']")
     public WebElement personName;
 
-    @FindBy(className = "PersonName-givenName")
+    @FindBy(className = "PersonName-givenName") //@FindBy(css = "[class='mt-0 mb-2 name']")
     public WebElement verification;
 
     @FindBy(id = "patient-search")
     public WebElement search;
 
-    @FindBy(xpath = "(//*[@role='alert']/tr)[1]")
+    @FindBy(xpath = "//*[text()='beybun kulilk']")
     public WebElement selectThePatient;
 
     @FindBy(xpath = "//*[@role='alert']/tr")

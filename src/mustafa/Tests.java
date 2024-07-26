@@ -51,7 +51,7 @@ public class Tests extends BaseDriver {
         elm.patientRecord.click();
         elm.search.sendKeys(name);
         elm.selectThePatient.click();
-
+        wait.until(ExpectedConditions.textToBePresentInElement(elm.verification,name));
         Assert.assertTrue(elm.verification.getText().toLowerCase().equals(name), "The patient name not found ");
     }
 

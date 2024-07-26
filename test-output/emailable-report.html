@@ -25,46 +25,21 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">myTest1</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">61.7 seconds</td><td class="numi"></td><td class="numi">Regression </td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">myTest1</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">30.5 seconds</td><td class="numi"></td><td class="numi">Regression </td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">myTest1 &#8212; failed</th></tr>
-<tr class="failedodd"><td>mustafa.Tests</td><td><a href="#m1"><b>FindPatientRecord</b> (PatientManagement) </a></td><td class="numi">1</td><td>1721821119172</td><td class="numi">20061</td></tr>
-<tr><th colspan="5">myTest1 &#8212; passed</th></tr>
-<tr class="passedodd"><td>mustafa.Tests</td><td><a href="#m2"><b>Login</b> (Smoke, Login) </a></td><td class="numi">1</td><td>1721821139262</td><td class="numi">32427</td></tr>
+<tr id="t1"><th colspan="5">myTest1 &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">mustafa.Tests</td><td><a href="#m1"><b>FindPatientRecord</b> (PatientManagement) </a></td><td class="numi">1</td><td>1721946041545</td><td class="numi">17929</td></tr><tr class="passedodd"><td><a href="#m2"><b>Login</b> (Smoke, Login) </a></td><td class="numi">1</td><td>1721946059477</td><td class="numi">4398</td></tr>
 </table>
 <h1>myTest1</h1>
-<h2 id="m1">mustafa.Tests:FindPatientRecord</h2>
+<h2 id="m1">mustafa.Tests:Login</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">mustafa.Tests:FindPatientRecord</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
 <tr class="param stripe"><td>beybun</td>
 </tr>
-<tr><td>
-<div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 18.071
-  (Session info: chrome=126.0.6478.182)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_371&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c8470722258cbb3380e7f070f3e53ebc, get {url=https://openmrs.org/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\mustafa\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58913}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58913/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c8470722258cbb3380e7f070f3e53ebc
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at Utility.BaseDriver.loginTest(BaseDriver.java:43)
-	at mustafa.Tests.FindPatientRecord(Tests.java:49)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 26 stack frames</div>
-</td></tr>
 </table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">mustafa.Tests:Login</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
