@@ -3,17 +3,14 @@
 <suite name="mySuite">
     <test name="myTest1">
 
-        <parameter name="name" value="beybun"></parameter>
-        <parameter name="lastname" value="kulilk"></parameter>
-
+        <parameter name="name" value="Mark Christopher "></parameter>
         <groups>
             <run>
-                <exclude name="Regression" />
+                <exclude name="PatientManagement" />
             </run>
         </groups>
-
         <classes>
-            <class name="mustafa.Tests" />
+            <class name="Tests.Tests" />
         </classes>
 
     </test>

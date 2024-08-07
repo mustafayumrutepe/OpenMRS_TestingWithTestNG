@@ -1,4 +1,4 @@
-package mustafa;
+package Tests;
 import LocatorPage.Elements;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -38,7 +38,7 @@ public class Tests extends BaseDriver {
 
         Select select=new Select(elm.relationship);
         select.selectByVisibleText("Parent");
-        elm.personName.sendKeys("mustafa",Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER);
+        elm.personName.sendKeys("Tests",Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER);
 
         Assert.assertTrue(elm.verification.getText().toLowerCase().equals("beybun"), "The patient name not registered ");
     }
@@ -87,5 +87,53 @@ public class Tests extends BaseDriver {
         Object[] data={"beybun"};
         return data;
     }
+
+
+
+        @Test(groups = ("Smoke"))
+        public void CheckingToSystemErrors(){
+        Elements elm=new Elements();
+        OpenWebsite();
+        elm.Username.sendKeys("deneme1");
+        elm.password.sendKeys("");
+        elm.location.click();
+        elm.LoginButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(elm.Username));
+        elm.Username.sendKeys("");
+        elm.password.sendKeys("deneme1");
+        elm.location.click();
+        elm.LoginButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(elm.Username));
+        elm.Username.sendKeys("deneme1");
+        elm.password.sendKeys("deneme1");
+        elm.location.click();
+        elm.LoginButton.click();
+
+        OpenMyAccount();
+
+
+    }
+        @Test(groups = {"Smoke"})
+        public void LogoutFromTheSystem(){
+        OpenMyAccount();
+        Elements elm=new Elements();
+        elm.logout.click();
+        Assert.assertTrue(elm.LoginButton.isEnabled(),"Test pass");
+    }
+
+        @Test(groups = {"Smoke"})
+        public void MyAccount(){
+        OpenMyAccount();
+        Elements elm=new Elements();
+        elm.admin.click();
+        elm.MyAccount.click();
+        wait.until(ExpectedConditions.elementToBeClickable(elm.ChangePasswords));
+
+    }
+
+
+
+
+
 }
 

@@ -3,17 +3,19 @@
 <suite name="mySuite">
     <test name="myTest1">
 
-        <parameter name="name" value="Mark Christopher "></parameter>
+        <parameter name="name" value="beybun"></parameter>
+        <parameter name="lastname" value="kulilk"></parameter>
+
         <groups>
             <run>
-                <exclude name="PatientManagement" />
+                <exclude name="Regression" />
             </run>
         </groups>
+
         <classes>
-            <class name="cagri.Tests" />
+            <class name="Tests.Tests" />
         </classes>
 
     </test>
 </suite>
 
-        <!-- ????????? include calismiyor-->
